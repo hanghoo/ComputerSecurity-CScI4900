@@ -1,0 +1,43 @@
+Why this format?
+================
+
+Why are we using this strange git setup instead of Blackboard or another
+message board or discussion forum?
+
+
+Answer
+======
+
+In the past, I have used `piazza.com`, but now they are charging non-trivial
+amounts of money for each class.  I chose git in part out of selfishness (this
+is something I am most familiar with), but I also think there are some nice
+benefits: while the repository is hosted by a third party (bitbucket in our
+case), everyone will also have a local copy and there is no risk of useful
+content disappearing.  It might also be nice to use your own local search
+tools with regular expression support and such.
+
+
+Discussion
+==========
+
+Use this to ask follow-up questions.  I would suggest annotating each reply
+with your name (or nickname) to make the conversation easier to follow, and to
+be able to "@" people.  Think IRC if you've ever used that.  Example:
+
+
+(lynxis): doesn't this scenario produce an increased chance of merge
+conflicts, especially down here in the discussion section?
+
+(wes): hopefully the volume isn't too high, and they will be rare!
+
+(Sujoy): Can we form groups for both HW and Project? or Just only project?
+
+(akeysny): Do we commit a txt file with HW to our group repo and add you to that repo?
+
+(wes): I would be delighted if you worked together on homework as well the
+projects, but I would prefer everyone turn in their own for that.  To submit
+it, you can email me, or send a link to a repository if you would prefer.
+Btw, txt is OK, but LaTeX is even better for something like that!
+
+(wes): Also, please add a new file for new questions.  I think it will reduce
+the chances of merge conflicts and maybe keep things better organized : )

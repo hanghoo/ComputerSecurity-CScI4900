@@ -1,0 +1,20 @@
+CSc I4900 Wiki / Q+A
+====================
+
+Hello class!  We will be using this repository instead of a usual Q+A forum or
+message board.  Below I outline my vision for how it will work.
+
+
+The basics are as follows:
+
+1. Type your question in a text file.  Save the file with a name that hints at
+   the contents, and perhaps use `mkd` or `txt` extension.
+1. Add to repository and commit.
+1. I will edit that file with an answer as soon as I can, but anyone else that
+   knows the answer is free to jump in.
+
+*NOTE:* if you have related questions, append them to the discussion section
+at the end.  I have tried to come up with a sensible format for discussion
+(see `example.mkd`), but I am open to suggestions!
+
+*NOTE:* I plan to add a folder for announcements as well.
