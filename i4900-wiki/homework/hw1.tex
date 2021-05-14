@@ -1,0 +1,204 @@
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xspace}    % takes care of conditional inclusion of space
+\usepackage{enumitem}
+
+% setup margins:
+\topmargin -1.5cm
+\oddsidemargin -0.04cm
+\evensidemargin -0.04cm
+\textwidth 16.59cm
+\textheight 21.94cm
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\zp}{\ensuremath{\Z/p\Z}}
+\newcommand{\ppt}{\ensuremath{\mathsf{PPT}}}
+\newcommand{\indppt}{\underset{{ }^{\ppt}}{\thickapprox}}
+\newcommand{\inv}{^{-1}} %saves a little typing...
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\pr}[2]{\Pr_{#1}\left[#2\right]}
+\def\rand{\stackrel{{}_{\$}}{\leftarrow}} %saves a little space
+\newcommand{\bit}{\set{0,1}}
+\renewcommand{\to}{\longrightarrow}
+\newcommand{\te}{there exists\xspace}
+\newcommand{\st}{such that\xspace}
+\newcommand{\ie}{\emph{i.e.,}\xspace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%vim syntax hack.
+\newif\ifsyntaxhack
+\syntaxhackfalse
+\ifsyntaxhack
+\section*{}
+\fi
+%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\title{Homework 1}
+\date{}
+
+\maketitle
+
+\section{Part I -- Basic Number Theory} % {{{[[[
+
+
+\begin{enumerate}
+\item Compute \(\varphi(n)\) for \(n=2,5,6,8,12\).
+
+\item Compute:
+  \begin{itemize}[noitemsep]
+	\item \(2^4 \mod 5\)
+	\item \(3^{6} \mod 7\)
+    \item \(4^{8}\mod 15\)
+    \item \(4^{24}\mod 15\)
+	\item \(15^{66} \mod 23\)
+	\item \(43^{48} \mod 105\)
+  \end{itemize}
+
+\item You should have noticed a pattern in the above computations.  Try to
+  generalize what is going on.  Does the result of \(33^{48} \mod 105\)
+  contradict your conjecture?  If no, congratulations.  Otherwise, fix your
+  generalization.
+
+\item How many solutions does the equation \(7x=14\mod 35\) have in
+    \(\Z_{35}\)?
+
+\item How many solutions does the equation \(6x=14\mod 35\) have in
+    \(\Z_{35}\)?
+
+\item How many solutions does the equation \(10x=14\mod 35\) have in
+    \(\Z_{35}\)?
+\item Try more examples and see if you can you generalize what is going on.
+
+\item Find the multiplicative inverse of \(22\) in \(\Z_{35}\).
+
+\item Prove that if \(p\) is prime, \(\varphi(p^\alpha) = p^{\alpha-1}(p-1)\).
+
+\item Using the exercise above and the fact that \((a,b)=1 \implies
+  \varphi(ab) = \varphi(a)\varphi(b)\), prove the following formula for
+  \(\varphi(n)\) in terms of the factorization \(n =
+  \prod_{i=1}^{k}p_i^{\alpha_i}\): \[\varphi(n) = n\prod_{i=1}^{k}
+  \left(1-\frac{1}{p_i}\right).\]
+
+\item Find an integer \(n\in\Z^+\) such that \[\frac{n}{\varphi(n)} >
+    10.\]
+
+\item  Write a program (say using the GMP library) that takes an integer
+  \(\ell\) as input and outputs a random prime number of \(\ell\) bits.  Use
+  the output to plot the running time of GMP's \texttt{factor} program against
+  the bit length of the inputs (where each input is the product of two equal
+  length primes).
+
+\end{enumerate}
+
+\subsection*{Bonus Number Theory Questions}
+\noindent\textbf{NOTE: you might find the following a little more challenging.
+Don't kill yourself over these.}
+\begin{enumerate}
+
+\item For any odd prime integer \(p\), prove that \((p-1)! = -1 \mod p\).
+
+\item Suppose that \(p\) is a prime, and that \(p\equiv 3 \mod 4\).  Show
+    that there is no integer \(x\in\zp\) such that \(x^2 = -1\).  (Hint:
+    think about Lagrange's theorem.)
+
+\item Show that for any \(c\in\Z^+\) \te\ \(n\in\Z^+\) \st\ \(n/\varphi(n) >
+    c\), \ie\ that \(\limsup_{n\rightarrow \infty}n/\varphi(n) = \infty\).
+
+\end{enumerate}
+
+% section Part I -- Basic Number Theory (end) ]]]}}}
+
+\section{Part II -- Security Definitions} % {{{[[[
+
+\begin{enumerate}
+  \item Let a \(M\) be a finite set of messages, and let \(S(M)\) denote the
+	set of all permutations of \(M\) (all bijective functions \(f:M\rightarrow
+	M\)).  We'll assume that if given a description of \(\sigma\in S(M)\),
+	both \(\sigma\) and \(\sigma\inv\) are efficiently computable.  Suppose
+	\(P\subset S(M)\) is such that \(\forall x,y\in M\), \(\exists \sigma\in
+	P\) such that \(\sigma(x) = y\).
+	\begin{enumerate}[noitemsep]
+	  \item Show that \(|P|\geq |M|\).  (This is easy, but makes sure you've
+		parsed the definition.)
+	  \item Show that if \(|P| = |M|\), then the following encryption scheme
+		is \emph{perfectly secure}, provided you only use it once:
+		\begin{itemize}[noitemsep]
+		  \item Key generation: select a random \(\sigma\in P\);
+		  \item Encryption: \(m\mapsto \sigma(m)\)
+		  \item Decryption: \(c\mapsto \sigma\inv(c)\)
+		\end{itemize}
+	  \item Show that the above is false if \(|M| < |P| < 2|M|\).
+	  \item Observe that for any finite group \(G\) and any \(g\in G\), the
+		map \(x\mapsto gx\) is a permutation of \(G\).  By viewing \(G\)
+		itself as a set of permutations of \(G\) in this way, show that the
+		above property is satisfied (with \(M = P = G\)).
+	  \item The traditional \texttt{xor} one time pad is a special case of the
+		above.  What is the finite group in this case?
+	\end{enumerate}
+  \item Suppose you want to encrypt a single bit, say via a OTP, but you only
+	have access to a \emph{biased} coin for key generation (that is, one
+	outcome of the coin might be slightly more probable than the other).  Show
+	that if you use a single coin toss for key generation, your scheme will
+	\textbf{not} be perfectly secure.  How might you generate a uniformly
+	random key (50/50 chance for 0/1) with this coin by flipping it multiple
+	times?  (This is a bit tricky!)
+
+  \item Suppose an encryption scheme acts on ascii-formatted plaintext
+	messages by permuting the ascii characters.  That is, a message \(m =
+	a_1\dots a_n\) would be encrypted as \(a_{\pi(1)}\dots a_{\pi(n)}\) for
+	some (possibly randomized) permutation \(\pi\) (the \(a_i\) are the
+	characters of the mesage).  Prove such an encryption scheme can never be
+	IND-CPA secure.
+
+% \item Can a substitution cipher ever be CPA secure?  Prove your answer.
+
+  \item If an encryption scheme is IND-CPA secure, and if \(D\) is the
+	decryption function, how must \(|D\inv(x)|\) relate to the security
+	parameter (asymptotically) for any (efficiently computable) \(x\) in the
+	message space?  Conclude in particular that a public-key,
+	\emph{deterministic} encryption scheme (like vanilla RSA) can never be
+	IND-CPA secure.
+
+  \item Suppose a public-key cryptosystem encrypts integers (say, modulo
+	another integer \(n\)).  Let \(E,D\) denote the encryption and decryption
+	algorithms, respectively.  Show that if this scheme has the property that
+	\(D(E(x)E(y))\allowbreak = x+y\) for any messages \(x,y\), then the scheme
+	is necessarily vulnerable to a CCA2 attack.
+
+  \item For IND-CPA security, recall that we had two definitions: a ``game-style''
+  definition, and the ``semantic'' definition, stating that for all
+  distributions \(D\) on the message space \(M\), and for all predicates \(P:
+  M\to \bit\), any efficient algorithm that predicts the predicate on input of
+  a ciphertext will succeed with probability at most \(l+\epsilon\), where \[l
+  = \max_{b\in \bit} \pr{m\rand D}{P(m)=b}\] and where \(\epsilon\) is
+  negligible in the security parameter. Show that if an encryption scheme is
+  secure according to the game-style definition, then it is secure under the
+  semantic definition.  \emph{Note: the converse is also true.  Try to prove
+  that as well.  It is a little harder though.}
+
+  \item Consider an encryption scheme \((G,E,D)\) with the following property:
+	in addition to the usual key generation algorithm \(G\), there exists an
+	algorithm \(\widetilde G\) such that
+	\begin{itemize}[noitemsep]
+	  \item \(G(1^\lambda)\indppt \widetilde G(1^\lambda)\), and yet,
+	  \item for \(\widetilde{\mathsf{pk}}\leftarrow \widetilde G\), it holds
+		that for all equal-length messages \(m_0,m_1\), the distributions
+		\(E(\widetilde{\mathsf{pk}},m_0), E(\widetilde{\mathsf{pk}},m_1)\) are
+		identically distributed.
+	\end{itemize}
+	\begin{enumerate}[noitemsep]
+	  \item Prove that any such cryptosystem must be IND-CPA secure.
+	  \item Show how to construct such a cryptosystem based on the quadratic
+		residuosity assumption (a simple modification of the Goldwasser-Micali
+		cryptosystem suffices).
+	\end{enumerate}
+
+\end{enumerate}
+
+% section Part II -- Security Definitions (end) ]]]}}}
+
+\end{document}

@@ -1,0 +1,5 @@
+In case people are interested, here is a really great survey / introduction to
+secure multiparty computation:
+https://users-cs.au.dk/~ivan/smc.pdf
+
+Enjoy!

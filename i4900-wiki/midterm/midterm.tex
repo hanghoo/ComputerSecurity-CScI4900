@@ -1,0 +1,182 @@
+\documentclass[12pt]{article}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xspace}    % takes care of conditional inclusion of space
+\usepackage{enumitem}
+\usepackage{diagrams}
+
+% setup margins:
+\topmargin -1.5cm
+\oddsidemargin -0.04cm
+\evensidemargin -0.04cm
+\textwidth 16.59cm
+\textheight 21.94cm
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\zp}{\ensuremath{\Z/p\Z}}
+\newcommand{\ppt}{\ensuremath{\mathsf{PPT}}}
+\newcommand{\indppt}{\underset{{ }^{\ppt}}{\thickapprox}}
+\newcommand{\inv}{^{-1}} %saves a little typing...
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\pr}[2]{\Pr_{#1}\left[#2\right]}
+\def\rand{\stackrel{{}_{\$}}{\leftarrow}} %saves a little space
+\newcommand{\bit}{\set{0,1}}
+\newcommand{\gen}[1]{\left\langle #1 \right\rangle}
+\newcommand{\poly}{{\mbox{\rm poly}}}
+\renewcommand{\to}{\longrightarrow}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\title{CSC I4900 Midterm}
+%\author{William E. Skeith III}
+\date{}
+
+\maketitle
+\noindent
+\textbf{Important:} please answer \textbf{only 3} of the following questions.
+Answer the three you feel most confident about, and leave everything else
+blank.  \textbf{Reminder:} You can use your computer, our lecture notes, our
+books (Nigel Smart, Abhi + Rafael) and chat with me on Twitch but please use
+\textbf{nothing else}.  Do not look for answers online, and do not communicate
+with anyone but me during the exam.  You'll have 150 minutes for the exam.
+\newline \newline \newline
+\textbf{Name: }\hrulefill
+\newline\newline
+
+\begin{center}
+\begin{tabular}{|c|c|}
+  \hline
+  Problem & Score \\
+  \hline
+  1 &
+  \\
+  (10 points)& \\
+  \hline
+  2 &  \\
+  (10 points)& \\
+  \hline
+  3 &    \\
+  (10 points)& \\
+  \hline
+  4 &    \\
+  (10 points) & \\
+  \hline
+  5 &    \\
+  (10 points)& \\
+  \hline
+  6 &    \\
+  (10 points)& \\
+  \hline
+  7 &    \\
+  (10 points)& \\
+  \hline
+  8 &    \\
+  (10 points)& \\
+  \hline
+  9 &    \\
+  (10 points)& \\
+  \hline
+  total: &  \\
+  30 points& \\
+  \hline
+\end{tabular}
+\end{center}
+
+
+\newpage
+
+\begin{enumerate}
+  \item Prove that the DDH assumption is \textbf{false} for the group
+	\(G=\Z_p^\times\), where \(p\) is a prime.  Take for granted some
+	generator \(\gen{g} = \Z_p^\times\).
+  \item Suppose that \(\gamma\in \Z_p^\times\) generates a group \(G\) of
+	prime order \(q\), and say \(q^2\nmid (p-1)\).  With such parameters, the
+	DDH assumption is conjectured to hold.  However, if we were to use this
+	group for ElGamal encryption, the plaintext space would be
+	\(\gen{\gamma}\) and not all of \(\Z_p^\times\).  Show in fact that
+	ElGamal is \textbf{not} IND-CPA secure if we use it to encrypt arbitrary
+	messages in \(\Z_p^\times\).  (That is, if we are allowed to encrypt
+	values that are not a power of \(\gamma\).) \emph{Hint:} multiplying
+	\(h\in\gen{\gamma}\) with \(k\not\in\gen{\gamma}\) results in
+	\(hk\not\in\gen{\gamma}\), and if you think about the CRT, you will see
+	that it is easy to check whether or not a value is in \(\gen{\gamma}\).
+	How could you modify the scheme to encrypt arbitrary bit strings (say of
+	length \(\ell < \log_2 q\)) if given a hash function
+	\(H:\gen{\gamma}\to\bit^\ell\)?  (You can model the hash function as a
+	random oracle.)
+  \item Suppose that a prime number \(p\) is of the form \(p = 2^k+1\).
+	Describe an efficient algorithm for computing discrete logarithms in
+	\(\Z_p\).  That is, an efficient procedure for computing the exponent
+	\(x\) when given the value \(y = g^x\mod p\) where \(\gen{g} =
+	\Z_p^\times\).  (``Efficient'' means polynomial time in \(k\).)
+	\emph{Hint:} you can learn the bits of the exponent with the help of the
+	Legendre symbol \(x^{(p-1)/2}\).
+  \item Demonstrate that public-key encryption which protects against a
+	\emph{computationally unbounded} adversary is not possible to achieve.
+	Give as formal an argument as you can.
+  \item Describe a protocol for \emph{re-sharing} a secret that has already
+	been shared via polynomial interpolation (the Shamir scheme).  The
+	protocol should \textbf{not} at any point reconstruct the original secret,
+	and the new shares should be distributed identically to ``fresh'' shares.
+	You can assume the parties are ``honest but curious'' and will faithfully
+	execute the protocol you specify, but might try to learn additional
+	information from the communications.
+  \item A \(t\)-out-of-\(n\) secret sharing scheme is
+	information-theoretically secure if any subset of \(\leq t\) shares
+	reveals no information about the secret.  More precisely, for any values
+	\(s_1,\dots,s_t\) of a collection of \(t\) shares and for any probability
+	distribution \(S\) on the space of secrets, \[\pr{}{S=s \mid
+	s_1,\dots,s_t} = \pr{}{S=s}.\]  Show that any information-theoretically
+	secure secret sharing scheme which shares secrets from a finite set \(X\)
+	using shares from another finite set \(Y\) must satisfy \(|X|\leq |Y|\).
+	\emph{Hint:} it's a lot like the proof that you need to use long keys for
+	information-theoretically secure encryption.
+  \item A function \(f:X\to Y\) is said to be \emph{random-self-reducible} if
+	an efficient procedure to compute \(f\) on \emph{random} instances can be
+	used to compute \(f\) on \emph{any} instance.  Put another way, the
+	existence of an oracle \(\mathcal{O}\) with the following property
+	\[\pr{x\rand X}{\mathcal{O}(x) = f(x)} \geq \frac{1}{\poly(\ell)}\]
+	(where \(\ell\) represents a security parameter), would imply the
+	existence of an efficient\footnote{By this, we mean that the algorithm
+	always runs in polynomial time and succeeds in computing \(f(x)\) with all
+	but negligible probability (independent of the instance \(x\)!).}
+	procedure (which can make calls to \(\mathcal{O}\)) for
+	computing  \(f\) on \emph{any} input.  Show how both inverting RSA
+	(computing \(m\) from \(x = m^e\mod n\)) and the discrete log problem
+	(computing \(a\) from \(x = g^a\mod p\)) are random-self-reducible.
+	\emph{Note:} the oracle \(\mathcal{O}\) only ``works'' on uniformly random
+	instances!  You can't make any assumptions about what it does for specific
+	or arbitrarily chosen inputs.  You only know what it does on average.
+  \item A \emph{block cipher} (like AES) applies a pseudorandom permutation to
+	a message block based on a key \(k\): \(C_k:\bit^\ell\to\bit^\ell\).  To
+	encrypt messages \(m\in \bit^*\) which are longer than \(\ell\) bits, one
+	approach (called ``electronic codebook mode'') is to simply apply \(C_k\)
+	to each \(\ell\)-bit block of message \(m\), concatenating the results to
+	produce the ciphertext.  Prove that this approach is \textbf{not} IND-CPA
+	secure.
+  \item Let \(n\) be an RSA number (\(n = pq\), where \(p,q\) are distinct
+	\(\ell\)-bit primes) and \(y = x^2 \mod n\), for some \(x\in
+	\Z_n^\times\).  Suppose that a prover \(P\) who knows \(x\) wishes to
+	prove its knowledge of a square root \(x\) this to a verifier \(V\) that
+	knows only \(y\).  Consider the following protocol:
+    \begin{diagram}[width=5em,height=2em]
+    P         & \null                                   & V \\
+    \null     &  \rTo^{h = r^2\mod n}                   & \null \\
+    \null     &  \lTo^{b\in \bit}                       & \null  \\
+	\null     &  \rTo^{z = rx^b}  & \null  \\
+    \end{diagram}
+	Here, \(r\in_R \Z_n^\times\) is chosen by the prover and \(b\in_R\bit\) is
+	chosen by the verifier.  The above is repeated \(k\) times (with
+	independent random choices for \(r,b\) in each round) and the verifier
+	accepts the proof if and only if in each round \(z^2 = hy^b\).  Show that
+	this protocol is zero knowledge for an honest verifier.  Further, show
+	that it is actually a proof of knowledge -- if the prover could be rewound
+	to answer different values of \(b\) with the same value of \(r\), then the
+	secret square root \(x\) could be extracted.
+
+\end{enumerate}
+
+\end{document}

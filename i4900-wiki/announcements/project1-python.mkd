@@ -1,0 +1,36 @@
+Doing the project in Python
+===========================
+
+Some people have expressed an interest in doing the project in python.  Here
+are some resources that will help you accomplish that, if you so choose.
+
+* For doing RSA, the built-in `pow` function is efficient for the "powermod"
+  operation: https://docs.python.org/3/library/functions.html#pow
+* For other basic number theory computations (which should be enough to
+  implement RSA), this is probably the simplest thing:
+  https://github.com/Robert-Campbell-256/Number-Theory-Python/blob/master/numbthy.py
+  (Functions you would need: `inverse_mod`, `is_prime`, `euler_phi`,
+  `power_mod`, `gcd`)
+
+You will also need some basic crypto utilities, like AES and HMAC.  You should
+be able to find everything you need in this library:
+https://github.com/pyca/cryptography
+
+Relevant documentation from the above:
+
+* cryptography/docs/random-numbers.rst  (how to get cryptographically strong
+  random values, e.g. when generating keys)
+* cryptography/docs/hazmat/primitives/symmetric-encryption.rst  (shows
+  how to use AES and other block ciphers; see Nigel's book on pdf-page 146 to
+  learn about "modes of operation".)
+* cryptography/docs/hazmat/primitives/mac/hmac.rst  (shows you how to use
+  HMAC which you will need for the symmetric key scheme you implement. You can
+  also use this as a key derivation function to obtain your symmetric key(s)
+  from a random RSA plaintext, as described in the project readme)
+
+I would also like you to use the same command line interface as the skeleton.
+You can use `getopt` to help parse the command line:
+https://docs.python.org/3/library/getopt.html
+
+
+Hope that helps.

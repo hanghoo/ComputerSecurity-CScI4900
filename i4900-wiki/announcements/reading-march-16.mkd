@@ -1,0 +1,8 @@
+Sorry this is a bit late in coming, but if you are interested to read ahead a
+bit, the following will be relevant for tomorrow evening's lecture:
+
+* Nigel's book, Chapter 25 (ZK proofs)
+* Abhi+Rafael, Chapter 4 (also about ZK)
+
+You can also read about secret sharing in Chapter 23.5 of Nigel, and 6.1 of
+Abhi+Rafael.

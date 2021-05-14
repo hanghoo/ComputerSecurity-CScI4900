@@ -1,0 +1,18 @@
+(NickHoo): Hello Professor, Hope you are well.
+Currently, AI is super popular in every field. May I consult you if there are successful and practical Artificial Intelligence methods applying for cryptography? Thank you very much!
+
+Answer
+======
+
+Not so much that I know of, but there was one entertaining experiment where
+some researchers setup a few AIs to try develop a cryptosystem.  They had 2 of
+them trying to communicate without a third learning the content of their
+messages.  Here's the paper if you are curious:
+https://arxiv.org/abs/1610.06918
+
+(NickHoo): Professor, thank you very much!
+
+
+Discussion
+==========
+

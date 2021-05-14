@@ -1,0 +1,10 @@
+From what I understand there is at least one group of 6 people, and at least
+one person without a group.  Can we split a large group to include the left
+out student?  I ask that a representative from one of the large groups get in
+touch (email is fine).
+
+To be clear: I have no issues with *any* number of students talking through
+project details together.  In fact, I encourage this!  However, I do want
+everyone to have the experience of writing a bit of crypto code to see what is
+involved, and I'm not sure there is enough project to go around for 6
+students.  Thanks in advance for your understanding.

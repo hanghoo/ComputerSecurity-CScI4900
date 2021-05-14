@@ -1,0 +1,70 @@
+This program was just to help demonstrate looking around a program with gdb,
+and the affects of manipulating return addresses.  If you want to reproduce
+what we did in the lecture, here are some notes:
+
+1. Open 2 terminals (one will be for output of your program, the other for the
+   gdb session)
+2. Run `make debug`.  Now your program `./test` will have debugging symbols
+   embedded.
+3. From one of your terminals run the command `tty` and take note of the
+   output.  Let's say it tells you `/dev/pts/1`.
+4. From the other terminal, run `gdb -tty /dev/pts/1 test`
+5. Set a breakpoint, say in `g()`.  Just type `break g` in gdb.
+6. Now you can run your program under gdb (use the `run` command).
+
+Examining the call stack
+------------------------
+
+The `bt` (short for `backtrace`) command will show you the stack frames
+present at the moment (i.e., the call stack).  But it won't show you much
+about the contents.  For this we need to do a little work.  First, use the gdb
+command `info frame` to get some more in depth info about the current stack
+frame.  Take note of the base pointer (`rbp`) and the nearby location of the
+saved return address (`rip`).  Let's say `rip = 0x7fffffffdf70`.  See what's
+actually on the stack using the `x` ("x" for "eXamine") command like this:
+
+~~~~~~~~~~~~~~~~~~
+(gdb) x/xg 0x7fffffffdf70
+0x7fffffffdf70: 0x555555555169
+~~~~~~~~~~~~~~~~~~
+
+What instruction is `0x555555555169`?  Find out like this:
+
+~~~~~~~~~~~~~~~~~~
+(gdb) info line *0x0000555555555169
+Line 12 of "test.c" starts at address 0x55555555515f <f+11>
+   and ends at 0x55555555516c <f+24>.
+~~~~~~~~~~~~~~~~~~
+
+And indeed, line 12 is where we called `g` from.  Let's change it and see what
+happens.  In particular, let's make it point to the code of `lonely` which was
+never called by `main` or any of our other functions.  First find out where
+`lonely` lives:
+
+~~~~~~~~~~~~~~~~~~
+(gdb) disassemble lonely
+Dump of assembler code for function lonely:
+   0x00005555555551a8 <+0>:     push   %rbp
+   0x00005555555551a9 <+1>:     mov    %rsp,%rbp
+   0x00005555555551ac <+4>:     lea    0xe55(%rip),%rdi        # 0x555555556008
+   0x00005555555551b3 <+11>:    call   0x555555555030 <puts@plt>
+   0x00005555555551b8 <+16>:    mov    $0x0,%eax
+   0x00005555555551bd <+21>:    pop    %rbp
+   0x00005555555551be <+22>:    ret
+End of assembler dump.
+~~~~~~~~~~~~~~~~~~
+
+Now modify the return address on the call stack:
+
+~~~~~~~~~~~~~~~~~~
+(gdb) set {void*}0x7fffffffdf70 = 0x00005555555551a8
+~~~~~~~~~~~~~~~~~~
+
+Now if you `continue` in gdb, you will see the message from `lonely` appear in
+your other terminal.  (And probably the program will crash...)
+
+This easily malleable return address is one of the most basic mechanisms that
+allow for an attacker to hijack a program's flow of control.  I know this is
+pretty basic, but if you've never seen assembly code or looked into calling
+conventions, I thought going in depth might be helpful and give you better
+context for what follows.

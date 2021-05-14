@@ -1,0 +1,11 @@
+This code demonstrates the most basic consequences of buffer overruns on the
+stack: overwriting local variables.  A few notes:
+
+* To make this work I had to disable some of the protections that gcc enables
+  by default.  In particular, look for the `-fno-stack-protector` flag.  If
+  you remove that flag and run the program with an input that is too long, you
+  should see something about "stack smashing detected".
+* If you are curious about how this is implemented, you can browse the
+  assembly output.  There is a makefile target, but I will just include
+  assembly versions of the program with and without the stack protection for
+  your convenience (call-stack-c.s is the one with the stack canaries).

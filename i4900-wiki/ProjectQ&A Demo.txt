@@ -1,0 +1,14 @@
+<#1>: Hello professor, might you consider using a session to demonstrate the project or explain what we are/should be able to do based on materials covered so far. 
+Up to this point no one/group has been able to offer a coherent or basic understanding of how to approach the project or are unwilling to share their insights or knowledge; thus far. For those of
+us with no extensive programming background some expatiation might be needed.
+
+
+Answer
+------
+
+Absolutely.  I'll give a demo at the beginning of lecture tomorrow.  But I
+think it might also be worth setting up zoom calls with individual groups.  I
+could make some time tomorrow night after class and Wednesday afternoon or
+evening if people are available.  Email me if interested.
+
+<#1>: Absolutely, will discuss with group and keep you apprised.

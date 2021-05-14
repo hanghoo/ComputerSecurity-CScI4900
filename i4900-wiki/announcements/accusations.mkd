@@ -1,0 +1,193 @@
+Hello Class,
+
+I have been made aware of some accusations against me that are wholly false.
+I'd like the individual(s) bringing them against me to have the courage to
+address me directly -- I'm actually pretty friendly, and even now I have no
+ill will towards anyone.  Regardless, in the following I will address some of
+these claims.
+
+1. It has been claimed that I am not prepared for class.  This is wholly
+   false.  Before each lecture, I spend hours thinking about what I am going
+   to tell you and how to explain it in a way you can understand.  Further, I
+   have spent well over 10 years studying cryptography and published numerous
+   research papers in top journals the field, so it isn't as if I don't know
+   what I'm talking about.
+2. It has been claimed that I am not interested in teaching you, or that I
+   don't care if you are learning anything.  But I ask repeatedly for feedback
+   and for questions.  I monitor the wiki here regularly and respond to all
+   questions quickly.  Observe the git logs.  Additionally, I am in my posted
+   office hours every week waiting to talk to you.  And yet, no one has even
+   expressed a concern with me in spite of having many opportunities and
+   venues available to do so.
+3. It has been claimed I delete or alter the twitch vods.  This is false.
+   They are automatically removed after about two weeks, and as I have
+   mentioned, you can download them yourself if you plan to view later on.  If
+   you found one that was not the full length, it is probably an artifact of
+   the stream momentarily going offline, leaving the vod broken in two.  I'm
+   not remotely embarrassed of how our lectures proceed.  I mean...I leave
+   them on the internet for literally anyone to view, after all.
+
+
+I'm truly sorry if you are having a bad time in this class, but deflecting
+responsibility will not serve you well.  You must acknowledge your own role in
+whatever failures have taken place so far.  Understanding can't just be
+uploaded to your brain -- it doesn't matter how much you spend on tuition.
+You have to work for it.  Furthermore, this is a graduate class, and I am
+teaching it like one.  I don't water down the subject matter; I show you how
+things really work.  All I ask is that you be curious, motivated, and ask
+questions.
+
+Now it may be the case that you are not prepared for what we are covering.
+This is always a possibility, and it is why I frequently ask for your feedback
+and questions -- I am more than happy to adjust the pace to accommodate you.
+But you have to let me know.  I can't read your mind.
+
+I am actually a tremendous resource for you.  I have a considerable amount of
+insight to share with you, and I am interested in doing so.  I invite you now
+to engage in more constructive behavior which might prevent this resource from
+going to waste.  Please either email me or ask new questions here on the wiki
+which include:
+
+1. Specifically what you are failing to understand.
+2. What resources (from the reading I have recommended) you have gone through.
+   Please be detailed about what you read that did not make sense to you.
+
+Follow these simple steps and we will surely make progress.
+
+
+
+Discussion
+==========
+
+> From Iara Celeste Diaz---a former student who has drpped this curse of a course.
+> 
+> HI Professor Skeith - Our group has six people and it is a random sample of the 21 person class.  
+> All of us cannot understand a thing you say.  
+
+(wes): then why don't you ask me to clarify?  I find this rather puzzling.
+
+> Please use ZOOM vs Twitch. Twitch is for gamers.
+
+(wes): twitch is actually for lots of things, and it has been very effective
+for my other classes.  Can you tell me what zoom provides that twitch does
+not?  (Btw, one of the reasons I use twitch instead of zoom is that zoom
+requires proprietary software, whereas I can stream to twitch with just
+ffmpeg.  I deliver our class from my own computers, which operate -- down to
+the motherboard firmware -- on free software alone.)
+
+> At the surface, you look as though you are truly teaching a legit topic.
+> But in reality none of us can understand you.We Cannot understand the
+> PROJECT as well.  If that requires advanced C++
+> this should have beren stated on the prerequisite for your course.
+
+(wes): The project does not require advanced C++ (or C for that matter).  I
+gave you a skeleton written in C, and made clear that you can write it in
+whatever language you choose; just adopt the same command line interface.  I
+didn't think it would be unreasonable to assume that a grad student in CS
+knows how to program in some language or other to make a command line utility.
+And again, why are you so shy to ask questions?  If after considerable effort
+on your part you still feel that nothing makes sense, that *should* alarm you,
+and you should talk to me at once so that I can help.
+
+> We showed your Project to an old CS professor from HK and even he couldnt understand your project.
+
+(wes): Did he watch the first 12 or so hours of my lectures?  What is his
+background?  Is he a cryptographer?  This is grad school.  I am trying to
+teach you some sophisticated things that are likely not common knowledge to
+just anyone with a CS degree.  And again I am puzzled: why in the world would
+you solicit help from some other professor about this instead of me if you are
+feeling lost?  One of your classmates was confused about the project, talked
+to me for 15 minutes in office hours, and came away with a good idea of what
+to do.
+
+> It also seems peculiar that you assigned this Project two days AFTER (feb 21) the dropping of classes deadline.  
+> (Feb 19) This is catfishing.  If students had known about the nature of the project early on,
+> they could have had the chance to drop the class rather than being stuck in a class
+> where they could not understand the project.  
+
+I'm really sorry it worked out that way.  I pay very little attention to most
+administrative deadlines (I try to make sure I've given and graded an exam
+before the 'W' deadline, but that's usually it).  It was certainly not
+intentional -- I just wanted to have covered enough material in lecture so
+that the project might make sense by the time I gave it to you.  I will be
+more mindful of those deadlines in the future.
+
+> We also resort to youtubing the topics you assign to class and we haved found better teachers
+> that teachn the same topic.  This takes hours of our time.  The videos in Youtibe are clear,
+> the teachers are CLEAR!  Why couldnt you be more like them?
+
+(wes): Honestly, solely in terms of educational value in 2021 (set aside the
+prestige of a degree, and so on), I see the distinguishing features of going
+to a university as follows:
+
+* You can interact personally with experts in disciplines that interest you
+  and work with skilled and knowledgeable mentors.
+* It places you in a community of motivated people learning together.
+* Access to sophisticated laboratories (not usually applicable to CS).
+
+If you have no plans to ask detailed questions to your professors about the
+subject (as seems to be the case), you might consider saving yourself the
+money and just watching youtube.  Really.  I'm not being sarcastic.  A
+motivated, intelligent person can learn a ton on their own from the internet.
+You may miss out on the community to some extent, but right now with distance
+learning, that benefit is perhaps somewhat diminished anyway.
+
+> It IS not our problem.  It is your job to teach us and make the material digestible for students. 
+> Also, this MO of asking us in class whether we understand you or not is not effective.  In a small class, students are afraid 
+> to raise hands and say they dont understand for fear of looking dumb.
+> Dont use Psi-OPS on us.  Its an ineffective way of asking students to tell u
+> whether they understand the material or not.  No one will easily comre forward.
+> ANd when we do ask you questions, you gaslight with your answers.
+> 
+> Why dont you prepare a good lecture once and for all.  Tell us what the function of whatever 
+> proofs or equations u are talking about.  Show us the big picture birds eyeview.  Then tell us about 
+> the equation youre talking about and how that fits in the big picture.
+> Rather than just going on and on solving an equation/proof on twitch that maybe even yourserlf 
+> dont understand.
+> 
+> Please dont underestimate your students.  WE can perceive what IS going on.  
+> We know bad professors when we see one.  Because we have had good professors in the past.
+
+I fail to see how my approach indicates I am underestimating you, but I'm
+really sorry you feel that way.  I am teaching you at a high level, and
+expecting you to put in a lot of effort.  As for questions, I had hoped the
+anonymity (pseduonymity) of twitch chat would make people less shy to ask
+questions -- especially if you already feel you are not alone in
+misunderstanding something.  In my other classes, I feel like I get a lot more
+questions on twitch than I would in person.  Also, if you are uncomfortable
+asking questions here in the wiki, just email me instead.
+
+> It is not the students fault as u claim here.  Most all of us cannot understand you.  
+> You are the problem it seems.  Your teaching style is UNCOOL.  Please change.
+
+(wes): It is not my job to be cool or teach in a cool way (whatever that
+means...).  It is my job to present you with challenging, topical material and
+to guide you through your struggle to understand it.  I am doing my part to
+the best of my ability, and I am trying to help you understand how to get the
+most out of your time here.  Many people when frustrated look for something
+external to blame.  You are obviously frustrated, and I am a natural target, I
+guess.  But please, really think about what I'm saying and see if it does not
+resonate with your own past experience:  Without exception, the most valuable
+things I have learned came from my own struggles in working through problems.
+I had terrific mentors, but ultimately all they can do is give guidance and
+put good challenges in front of me.  The rest is up to the student.  (I
+believe it is truly exceptional for a person to be able to understand deeply
+just by hearing someone speak or watching a lecture, and probably indicates
+they have one way or another already given a lot of thought to the subject.)
+
+Once again, I invite you to address items (1) and (2) at the end of my
+original post.  I have given you good resources to read and challenging,
+instructive problems to think about.  Rather than vagaries and personal
+attacks, please show me specifically what you have tried and exactly where you
+got stuck, and I will be delighted to help you out.  I know it may seem
+overwhelming, but take a deep breath and acknowledge right now that while it
+won't be easy, the rewards of the struggle will be worth it (they were for me,
+anyway).
+
+> PS And lastly, Prof. Skeith, I have asked for a letter of confirmation of my withdrawal from you.  
+> Please do not make me wait for it, i know you must be annoyed by me but it is my right
+> to get that withdrawal confirmation from you ASAP.  
+> Please dont make me wait--it will only make you look bad.  Thank you.
+
+I will of course facilitate you.  I am perhaps disappointed that it has turned
+out this way, but I'm not annoyed by anything.

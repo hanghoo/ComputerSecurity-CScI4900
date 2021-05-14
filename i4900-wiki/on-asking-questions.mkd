@@ -1,0 +1,48 @@
+Alternative ways to ask questions?
+==================================
+
+Hi Class,
+
+Turns out I have a question for you this time!  If people are uncomfortable
+asking questions in chat, can you help me come up with something better?  I
+have some ideas that might work (like a shared text editor that the whole
+class can access anonymously), but I am curious: does zoom provide this
+feature in a better way?
+
+Please email me your suggestions and I will gather them into an answer below
+(trying to save you from merge conflicts if a lot of people have an opinion
+and edit simultaneously).
+
+Also, if you are shy to ask questions here on the wiki, just email me.  With
+your permission, I could add the question here with no attribution (it will be
+me in the commit logs), or it can just stay in my email if you prefer.
+
+
+Discussion
+----------
+
+Thank you to those who reached out with some suggestions.  I will summarize
+some of the ideas below.  Please let me know what you think.  (Email is fine,
+or you can add discussion below.)
+
+1. Questions via voice?  As it is now, the chat is the only way to ask a
+   question as lectures are taking place.  If people would prefer it, I can
+   hold a zoom call at the same time as lecture and respond to any questions I
+   hear.  (I would just leave my phone nearby on speaker; the stream would
+   still be the main source of audio from me.)
+2. Signaling a question?  I can understand being reluctant to just start
+   talking during lecture, as it might feel like you are interrupting the
+   class.  But I think we could solve this easily as well.  We could just
+   reserve a special emote (maybe "ShowOfHands") which indicates you would
+   like to ask a question.  If I see it I will pause and take your question.
+   (But honestly, don't worry about this just for typing questions in chat --
+   just ask and I will respond when I see the opportunity.)
+   ShowOfHands: https://www.twitchemotes.com/emotes/303564554
+3. More anonymous questions?  As it is, I have no idea who anyone is from
+   their twitch handle.  But if you would like an even more anonymous forum,
+   we could do something like having a shared text editor (hosted by a third
+   party which does not require any registration) open during lecture.  I
+   think this might be kind of awkward, but if it really appeals to you let me
+   know.
+
+I welcome your thoughts.

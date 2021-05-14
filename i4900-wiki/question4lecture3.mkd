@@ -1,0 +1,31 @@
+(NickHoo): Hello Professor, I want to ask a question about lecture 3. 
+On page 6 of DLP.pdf, when we prove a'x = 1 + (j-kx)n, if we modulo n and cancel (1-jk)n part, the left side also modulo n, isn't it? 
+So the result will be a'x = 1 (mod n). How could we prove a' = x^-1
+
+Answer
+======
+
+If I recall, we introduced $a'$ to be the integer in the range $0..n-1$ which
+was equivalent to $a \mod n$ where $ax + bn = 1$ from the Euclidean algorithm.
+Then we get to the equation you mention, which holds over the integers (not
+modulo anything).  And as you have pointed out, this shows that $a'x$ is
+equivalent $\mod n$ to 1.  (Remainder of 1 after division by $n$.)  This is
+actually the whole proof -- *by definition* this means $a' = x^{-1}$!  The
+inverse of $x$ is defined to be "the thing by which you would multiply $x$ to
+get 1", and evidently $a'$ is it.  Hope that helps.
+
+
+Discussion
+==========
+
+(NickHoo): Professor, thank you for your answer. Nevertheless, in the begining, when we use Euclidean algorithm, we have get 1 - bn = ax, namely 1 ≡ ax (mod n). By definition, we will get a = x^-1. This is what I am confused why x^-1 = a or a'.
+
+(wes): If you look *modulo n*, then $a$ and $a'$ are the same thing!  The
+reason we introduced $a'$ was to get a number in the range $0,...,n-1$ since
+we defined the integers modulo $n$ to be just these values, and we want the
+inverse of $x$ to be among them.  (There's no guarantee that the original $a$
+is in that range.)  But this is a really minor point.  Most people
+(mathematicians even) would be happy enough calling $a$ the inverse of $x$.
+Sorry if the extra detail proved confusing.
+
+(NickHoo): Professor, thank you for your response. Your explanation is very clear.

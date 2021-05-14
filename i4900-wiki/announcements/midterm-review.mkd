@@ -1,0 +1,62 @@
+Midterm Review Session
+======================
+
+Scheduling + logistics
+----------------------
+
+From what I have heard, most people would be available Sunday evening for a
+review session for the exam.  Email me if you have some constraints and I will
+try to work around them before scheduling the precise time.  I'll run the
+twitch stream and have a zoom call in parallel if you want to discuss
+something not via chat.
+
+**Update:** As far as I can tell, Sunday evening seems fine for everyone, so
+let's plan on 7pm.  See you then!
+
+
+Topics to consider
+------------------
+
+I've not yet written the exam, but here are some of the things I think are
+most important.
+
+* Information theoretic security for encryption.  Know and understand a
+  definition (Perfect or Shannon).  Know how to make one (OTP) and understand
+  the limitations of such a strong definition.
+* One way functions (OWFs).  Understand the definition and understand the
+  candidates we've seen (multiplication/factoring, discrete logs, RSA,
+  squaring modulo a composite...).  This requires knowing a bit of number
+  theory.
+* Computational indistinguishability.  Understanding this concept goes a long
+  ways.  For one, it gives a nice way to state a lot of assumptions used for
+  public key cryptography.
+* Public key encryption.  Know the definitions (IND-CPA,IND-CCA) and be
+  familiar with the examples we've seen.  ElGamal is too important to not
+  understand, so make sure you understand it!  Know the required assumptions
+  (there are some delicate points in this regard, e.g., DDH being false in
+  Z_p) and perhaps what it would take to actually implement this (although I
+  doubt I would ask you to do that on the exam).  You should also understand
+  how RSA works.  Understand enough number theory to at least see how the
+  mechanics work out.  And also be aware of what you get in terms of security
+  from RSA.
+* Secret sharing and threshold encryption.  At least know what has been
+  accomplished, but if possible, try to understand the details as well.
+  Secret sharing via interpolation is actually pretty straightforward!
+* Zero Knowledge Proofs.  Make sure you understand the definitions, and make
+  sure you have understood at least one example.  If the graph stuff didn't
+  make sense, maybe look at Pedersen (the protocol for proving equality of
+  discrete logs).  You don't have to understand completely how we have managed
+  to get ZKPs for any NP language, but you should understand the significance
+  of that accomplishment (think about what it means for protocol design).
+* Signature schemes.  We didn't spend a ton of time on this, but perhaps try
+  to see the connection with ZKPs.  Again, look at Pedersen and how we removed
+  interaction from the original protocol.
+
+
+Exam format
+-----------
+
+I plan to give you a handful of questions, perhaps not so different than the
+ones you found in the homework, and I will ask you to solve a subset of your
+choice (e.g., maybe there are 6 questions and I will ask you to answer the 3
+you feel most confident about).
